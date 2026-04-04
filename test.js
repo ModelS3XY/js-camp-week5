@@ -21,8 +21,27 @@ const carts = [
 ];
 
 const orders = [
-  { id: 'order-1', createdAt: 1704067200, paid: false, total: 2097, user: { payment: 'ATM' } },
-  { id: 'order-2', createdAt: 1704153600, paid: true, total: 899, user: { payment: 'Credit Card' } }
+  {
+    id: 'order-1',
+    createdAt: 1704067200, // Unix timestamp
+    paid: false,
+    total: 2097,
+    user: { name: '王小明', tel: '0912345678', email: 'ming@example.com', address: '台北市信義區', payment: 'ATM' },
+    products: [
+      { ...products[0], quantity: 2 },
+      { ...products[2], quantity: 1 }
+    ]
+  },
+  {
+    id: 'order-2',
+    createdAt: 1704153600,
+    paid: true,
+    total: 899,
+    user: { name: '李小華', tel: '0923456789', email: 'hua@example.com', address: '台中市西區', payment: 'Credit Card' },
+    products: [
+      { ...products[1], quantity: 1 }
+    ]
+  }
 ];
 
 // ========================================
